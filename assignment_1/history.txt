@@ -1,0 +1,131 @@
+    1  /cita/local/bin/passwd
+    2  /cita/local/bin/password
+    3  exst
+    4  exit
+    5  prawn
+    6  exit
+    7  man
+    8  man man
+    9  cd/mnt/scratch-lustre/gchoudhry
+   10  cd /mnt/scratch-lustre/gchoudhry
+   11  pwe
+   12  pwd
+   13  exit
+   14  cd/mnt/scratch-lustre/gchoudhry
+   15  cd /mnt/scratch-lustre/gchoudhry
+   16  ls
+   17  cd desktop
+   18  cd Desktop
+   19  cd /Desktop
+   20  exit
+   21  cd
+   22  pwe
+   23  pwd
+   24  git clone https://github.com/Garvc07/CTA200H
+   25  ls
+   26  cd /CTA200H
+   27  cd/CTA200H
+   28  cd CTA200H
+   29  ls
+   30  touch hellocita
+   31  git push hellocita
+   32  git add hellocita
+   33  git commit -m "Wow hello"
+   34  git push
+   35  git pull
+   36  git add hellocita
+   37  git commit -m "Fixed a ton of bugs"
+   38  git push
+   39  ls
+   40  cd CTA200H
+   41  git pull
+   42  git add hellocita
+   43  git commit -m "Testing commit function"
+   44  git push
+   45  git status
+   46  ls
+   47  git remote set-url origin https://github.com/Garvc07/CTA200H.git
+   48  git push
+   49  exit
+   50  cd CTA200
+   51  cd CTA200H
+   52  git push
+   53  ls
+   54  cd 
+   55  ls
+   56  cd /fs/lustre/scratch/gchoudhry
+   57  ls
+   58  pwd
+   59  mkdir
+   60  mkdir --help
+   61  pwd
+   62  mkdir CTA200_2026
+   63  cd CTA200_2026
+   64  ls
+   65  pwd
+   66  mkdir assignment_1
+   67  cd assignment_1
+   68  nano
+   69  touch README.md
+   70  vi README.md
+   71  cd
+   72  pwd
+   73  cd /fs/lustre/scratch/murray
+   74  pwd
+   75  ls
+   76  cd
+   77  find Hello_world.c
+   78  Hello_world.py
+   79  find Hello_world.py
+   80  cd /fs/lustre/scratch/murray
+   81  cd /fs/lustre/scratch/gchoudhry
+   82  touch Hello_world.c
+   83  ls
+   84  exit
+   85  ssh -D 2400 gchoudhry@shrimp.cita.utoronto.ca
+   86  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   87  ssh -D 2400 gchoudhry@cosmo2.cita.utoronto.ca
+   88  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   89  ssh -D 2400 gchoudhry@cosmo4.cita.utoronto.ca
+   90  ssh -D 2400 gchoudhry@cosmo2.cita.utoronto.ca
+   91  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   92  cd
+   93  ls
+   94  cd Desktop
+   95  ls
+   96  exit
+   97  cd Desktop
+   98  exit
+   99  cd Desktop
+  100  mkdir CTA200_2026
+  101  cd CTA200_2026
+  102  ls
+  103  pwd
+  104  mkdir assignment_1
+  105  cd assignment_1
+  106  pwd
+  107  touch README.md
+  108  vi README.md
+  109  touch Hello_world_choudhry.c
+  110  touch Hello_world_choudhry.py
+  111  ls
+  112  module load gcc
+  113  gcc Hello_world_choudhry.c -o Hello_world.x 
+  114  gcc -o Hello_world.x Hello_world_choudhry.c
+  115  nano Hello_world_choudhry.c
+  116  gcc -o Hello_world.x Hello_world_choudhry.c
+  117  ./Hello_world.x
+  118  emacs Hello_world_choudhry.py
+  119  ./Hello_world_choudhry.py
+  120  python Hello_world_choudhry.py
+  121  vi Hello_world.x
+  122  vi Hello_world_choudhry.c
+  123  vi Hello_world_choudhry.py
+  124  gcc -o Hello_world.x Hello_world_choudhry.c
+  125  ./Hello_world_choudhry.py
+  126  ./Hello_world.x
+  127  python Hello_world_choudhry.py
+  128  ./Hello_world.x > output_c.txt
+  129  python Hello_world_choudhry.py > output_python.txt
+  130  cat output_c.txt
+  131  history > history.txt
