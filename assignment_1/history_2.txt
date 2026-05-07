@@ -1,0 +1,244 @@
+    1  /cita/local/bin/passwd
+    2  /cita/local/bin/password
+    3  exst
+    4  exit
+    5  prawn
+    6  exit
+    7  man
+    8  man man
+    9  cd/mnt/scratch-lustre/gchoudhry
+   10  cd /mnt/scratch-lustre/gchoudhry
+   11  pwe
+   12  pwd
+   13  exit
+   14  cd/mnt/scratch-lustre/gchoudhry
+   15  cd /mnt/scratch-lustre/gchoudhry
+   16  ls
+   17  cd desktop
+   18  cd Desktop
+   19  cd /Desktop
+   20  exit
+   21  cd
+   22  pwe
+   23  pwd
+   24  git clone https://github.com/Garvc07/CTA200H
+   25  ls
+   26  cd /CTA200H
+   27  cd/CTA200H
+   28  cd CTA200H
+   29  ls
+   30  touch hellocita
+   31  git push hellocita
+   32  git add hellocita
+   33  git commit -m "Wow hello"
+   34  git push
+   35  git pull
+   36  git add hellocita
+   37  git commit -m "Fixed a ton of bugs"
+   38  git push
+   39  ls
+   40  cd CTA200H
+   41  git pull
+   42  git add hellocita
+   43  git commit -m "Testing commit function"
+   44  git push
+   45  git status
+   46  ls
+   47  git remote set-url origin https://github.com/Garvc07/CTA200H.git
+   48  git push
+   49  exit
+   50  cd CTA200
+   51  cd CTA200H
+   52  git push
+   53  ls
+   54  cd 
+   55  ls
+   56  cd /fs/lustre/scratch/gchoudhry
+   57  ls
+   58  pwd
+   59  mkdir
+   60  mkdir --help
+   61  pwd
+   62  mkdir CTA200_2026
+   63  cd CTA200_2026
+   64  ls
+   65  pwd
+   66  mkdir assignment_1
+   67  cd assignment_1
+   68  nano
+   69  touch README.md
+   70  vi README.md
+   71  cd
+   72  pwd
+   73  cd /fs/lustre/scratch/murray
+   74  pwd
+   75  ls
+   76  cd
+   77  find Hello_world.c
+   78  Hello_world.py
+   79  find Hello_world.py
+   80  cd /fs/lustre/scratch/murray
+   81  cd /fs/lustre/scratch/gchoudhry
+   82  touch Hello_world.c
+   83  ls
+   84  exit
+   85  ssh -D 2400 gchoudhry@shrimp.cita.utoronto.ca
+   86  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   87  ssh -D 2400 gchoudhry@cosmo2.cita.utoronto.ca
+   88  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   89  ssh -D 2400 gchoudhry@cosmo4.cita.utoronto.ca
+   90  ssh -D 2400 gchoudhry@cosmo2.cita.utoronto.ca
+   91  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+   92  cd
+   93  ls
+   94  cd Desktop
+   95  ls
+   96  exit
+   97  cd Desktop
+   98  exit
+   99  ssh -L 1234:localhost:1234 cosmo6
+  100  module load python/3.10.2
+  101  jupyter notebook --port=1234 --no-browser
+  102  module load python/3.10.2
+  103  jupyter notebook --port=1234 --no-browser
+  104  jupyter notebook --port=1240 --no-browser
+  105  exit
+  106  ssh -L 1234:localhost:1234 cosmo6
+  107  exit
+  108  module load python/3.10.2
+  109  jupyter notebook --port=1400 --no-browser
+  110  exit
+  111  ssh -L 1400:localhost:1400 cosmo6
+  112  exit
+  113  ssh -L 8426:localhost:8426 cosmo6
+  114  module load python/3.10.2
+  115  jupyter notebook --port=8426 --no-browser
+  116  ssh -D 2400 gchoudhry@cosmo9.cita.utoronto.ca
+  117  cd Desktop
+  118  mkdir CTA200_2026
+  119  cd CTA200_2026
+  120  ls
+  121  pwd
+  122  mkdir assignment_1
+  123  cd assignment_1
+  124  pwd
+  125  touch README.md
+  126  vi README.md
+  127  touch Hello_world_choudhry.c
+  128  touch Hello_world_choudhry.py
+  129  ls
+  130  module load gcc
+  131  gcc Hello_world_choudhry.c -o Hello_world.x 
+  132  gcc -o Hello_world.x Hello_world_choudhry.c
+  133  nano Hello_world_choudhry.c
+  134  gcc -o Hello_world.x Hello_world_choudhry.c
+  135  ./Hello_world.x
+  136  emacs Hello_world_choudhry.py
+  137  ./Hello_world_choudhry.py
+  138  python Hello_world_choudhry.py
+  139  vi Hello_world.x
+  140  vi Hello_world_choudhry.c
+  141  vi Hello_world_choudhry.py
+  142  gcc -o Hello_world.x Hello_world_choudhry.c
+  143  ./Hello_world_choudhry.py
+  144  ./Hello_world.x
+  145  python Hello_world_choudhry.py
+  146  ./Hello_world.x > output_c.txt
+  147  python Hello_world_choudhry.py > output_python.txt
+  148  cat output_c.txt
+  149  history > history.txt
+  150  cat history.txt
+  151  pwd
+  152  cd ..
+  153  pwd
+  154  git init
+  155  git add README.md
+  156  mv README.md ..
+  157  cd assignment_1
+  158  pwd
+  159  mv README.md ..
+  160  cd ..
+  161  pwd
+  162  ls
+  163  git add README.md
+  164  git commit -m "Add and commit the README.md file."
+  165  git add assignment_1/
+  166  git commit -m "Add C and Python scripts, output files, and history file"
+  167  git remote add origin https://github.com/Garvc07/CTA200_2026.git
+  168  git branch -M main
+  169  git push -u origin main
+  170  ls
+  171  cd assignment)1
+  172  cd assignment_1
+  173  ls
+  174  ls -a
+  175  rm .Hello_world.x.swp 
+  176  cd
+  177  pwd
+  178  cd Desktop
+  179  ls
+  180  cd CTA200_2026
+  181  ls
+  182  cd assignment)2
+  183  cd assignment_2
+  184  ls
+  185  ssh -L 8000:localhost:8000 cosmo7
+  186  module load python/3.10.2
+  187  jupyter notebook --port=8000 --no-browser
+  188  /cita/local/bin/passwd
+  189  ssh -L 8426:localhost:8426 cosmo6
+  190  module load python/3.10.2
+  191  jupyter notebook --port=8426 --no-browser
+  192  module load python/3.10.2
+  193  jupyter notebook --port=8000 --no-browser
+  194  cd Desktop
+  195  pwd
+  196  ls
+  197  cd CTA200_2026
+  198  lkds
+  199  ls
+  200  git add assignment_2
+  201  git add assignment_2/
+  202  git commit -m "Completed part 1,2,and 3 of assignment 3"
+  203  git push -u origin master
+  204  git push
+  205  git status
+  206  git remote add origin https://github.com/Garvc07/CTA200_2026
+  207  git push
+  208  git push --help
+  209  git pull
+  210  git reset
+  211  pwd
+  212  ls
+  213  git status
+  214  git rm assignment_2
+  215  git rm assignment_2/
+  216  git add assignment_2/
+  217  git commit -m "Completed assignment 2"
+  218  git pull
+  219  git config pull.rebase true
+  220  git pull
+  221  git push
+  222  git config pull.rebase false
+  223  git pull
+  224  git status
+  225  git push
+  226  ssh -L 8000:localhost:8000 cosmo7
+  227  cd /fs/lustre/scratch/gchoudhry
+  228  ls
+  229  cd /fs/lustre/scratch/gchoudhry
+  230  cd /fs/lustre/scratch/murray
+  231  ls
+  232  find . -name "Hello_world.py"
+  233  pwd
+  234  cd
+  235  pwd
+  236  cd /home/murray
+  237  pwd
+  238  find . -name "Hello_world.py"
+  239  find . -name "Hello_world.c"
+  240  cd Desktop/CTA200_2026/assignment_1
+  241  cd
+  242  cd Desktop/CTA200_2026/assignment_1
+  243  pwd
+  244  history > history_2.txt
