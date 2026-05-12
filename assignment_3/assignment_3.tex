@@ -1,0 +1,113 @@
+\documentclass[10pt, preprint]{aastex}
+
+%this is all needed to use the lstlisting package with colours
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+
+\usepackage{minted}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage{amsmath}
+\usepackage[toc,page]{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=blue,
+}
+\usepackage{booktabs}
+\renewcommand{\arraystretch}{1}
+\usepackage{siunitx}
+
+\title{Assignment 3 CTA200H}
+
+\author{Garv Choudhry}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+In this assignment, we investigate two computational problems. The first problem requires us to iterate a complex polynomial and study the points that diverge to infinity and the points that remain stable. We can use these calculations to visualize fractal patterns as we will see in section~\ref{sec:Q1}. The second problem involves us studying unpredictable behaviour in physical systems and replicating the 1963 findings of Edward Lorenz. Using Lorenz's equations, we reproduced some of Lorenz's plots and were able to see that small errors in the initial conditions grow very rapidly, meaning that it is difficult to accurately predict the future behaviour of the system. 
+
+\section{Question 1}
+\label{sec:Q1}
+For the first question, we were working with the following complex polynomial 
+\begin{equation}
+   z_{i+1} = z_i^2 + c
+\end{equation}
+where for each point in the complex plane $c=x+iy$ with $-2<x<2$ and $-2<y<2$ we iterate the equation. To compute this iteration, we had to make a function in python which used a for loop bounded by a maximum iteration value, for this assignment this value was set to 100. This revealed a distinction between stable and unstable regions, this can be seen through the two plots produced. The first (Figure~\ref{fig:bdd}) shows the collection of points that do not escape to infinity in black, this is where iterations converge and stay bounded. The second figure (Figure ~\ref{fig:div_iteration}) displays a colourscale defined by the iteration number at which a given point diverged. This iteration of divergence plot shows the fractal nature of the sets boundary, it also demonstrates that points closer to the boundary take a lot more iterations to diverge than those further away. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\textwidth]{Images/bounded points.png}
+\caption{\label{fig:bdd} Visualization of the bounded (black) and diverged (white) points}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.6\textwidth]{Images/divergence iteration scale.png}
+\caption{\label{fig:div_iteration} Points in the complex plane coloured based on iteration number at which they diverge}
+\end{figure}
+
+\section{Question 2}\label{sec:Q2}
+Lorenz's equations consist of the following non-linear ordinary differential equations with amplitudes denoted by $W=(X,Y,Z)$
+\begin{align}
+    \dot{X} &= -\sigma(X-Y)\\
+    \dot{Y} &= rX-Y-XZ\\
+    \dot{Z} &= -bZ+XY\\
+\end{align}
+where $\sigma$ is the Prandtl number (ratio of kinematic viscosity to the thermal diffusivity), $r$ is the Rayleigh number (which depends on the vertical temperature difference between the top and bottom of the atmosphere), and $b$ is a dimensionless length scale. First, we created a function that calculated these derivatives in python and then using Python's numerical integration tools, in particular the solve ivp function from the scipy.integrate library, we were able to solve this system of ordinary differential equations. We integrated the equations for $t=60$ using a timestep of $\Delta t=0.01$. We also used Lorenz's initial conditions of $W_0=[0.0,1.0,0.0]$ and his parameter values of $\sigma =10.0, \space r=28,\space b=8.0/3.0$. With this solved system we were able to reproduce Lorenz's Figure 1 and 2 as seen below. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.8\textwidth]{Images/rep_fig1.png}
+\caption{\label{fig:r1} Reproduction of Lorenz's Fig. 1 and the numerical solution of Lorenz's equations. The upper curve represents the Y(t) solution for the first 1000 iterations, the middle curve represents the second 1000 iterations, the lower curve represents the last 1000 iterations.}
+\end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.81\textwidth]{Images/rep_fig2.png}
+\caption{\label{fig:r2} Reproduction of Lorenz's Fig 2. and the numerical solution of Lorenz's equations. Upper graph shows the projections on the Y-Z plane and the lower graph shows the projections on the X-Y plane. Both showing the trajectory corresponding to iterations 1400-1900}
+\end{figure}
+
+The reproduction of Lorenz's Figure 1 shows us that the system does not settle on any repeating pattern like we expect from a non chaotic simple pendulum. We can observe that Y oscillates at varying amplitudes with no coherent pattern, making it very difficult to determine the state in the future by simple observations. Also note that our reproduction is slightly different from the 1963 figure Lorenz made, this is a consequence of the system being inherently chaotic, slight deviations in machine tolerances and evolutions in technology make it nearly impossible to recreate exactly what Lorenz had. We made use of the rtol and atol arguments in the solve ivp function in order to get as accurate of a reproduction as possible as these also act as a form of initial conditions that define the computer's rounding errors.  
+The reproduction of Figure 2 shows that the trajectory seems to orbit around two different attractors and while the path does not seem to repeat exactly, it stays bounded within a region of space. 
+Finally, we had to compare two nearly identical starting points. We varied the initial conditions slightly from our original $W_0$ and defined $W_0'=W_0+[0.0, 1.0e-8, 0.0]$. We calculated the distance between $W'$ and $W$ using
+\begin{equation}
+    \text{distance}= \sqrt{\Delta X^2+\Delta Y^2+\Delta Z^2}
+\end{equation}
+where $\Delta X = X'-X$ etc. 
+Plotting the distance vs time on a semilog plot reveals a linear pattern (Figure~\ref{fig:compare}, telling us that the distance between the two trajectories grows at a constant linear rate on the log scale. This indicates exponential growth and confirms that certain physical systems have certain chaotic aspects that make it extremely difficult to predict long term behaviours as even extremely small deviations in measurements create entirely new trajectories. 
+
+\end{document}
